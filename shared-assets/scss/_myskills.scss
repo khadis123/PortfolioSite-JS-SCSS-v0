@@ -1,0 +1,214 @@
+/* Skills Section */
+
+@import 'variables';
+@import 'mixins';
+
+#skills {
+    margin: 100px auto;
+  }
+
+  #skills h2 {
+    text-align: center; /* Centers the text horizontally */
+    width: 100%; /* Ensures the h2 takes full width */
+
+  }
+    /* Responsive Container */
+    .responsive-container {
+        margin: 0 auto;
+        width: 90%; /* Default for mobile */
+      }
+      
+      /* Apply the responsive styles to all images with the .responsive-image class */
+      .responsive-container .responsive-image {
+        width: 100%;
+        height: auto; /* Ensures the image maintains its aspect ratio */
+      }
+      
+      /* Tablet Styling */
+      @media (min-width: 768px) {
+        .responsive-container {
+          width: 80%; /* Tablet */
+        }
+      }
+      
+      /* Desktop Styling */
+      @media (min-width: 1024px) {
+        .responsive-container {
+          width: 100%; /* Allow full width initially */
+          max-width: 720px; /* Constrain to 720px maximum */
+        }
+      }
+  
+  .skill-row {
+    width: 100%;
+    margin: 100px auto;
+    text-align: left;
+  }
+  
+  /* Skill Row Images */
+.code-img {
+    width: 25%; /* Occupies 25% of available screen width */
+    height: auto; /* Maintains aspect ratio */
+    float: left; /* Floats to the left */
+    margin-right: 30px; /* Adds spacing to the right */
+  }
+  
+  .social-media-img {
+    width: 25%; /* Occupies 25% of available screen width */
+    height: auto; /* Maintains aspect ratio */
+    float: right; /* Floats to the right */
+    margin-left: 30px; /* Adds spacing to the left */
+  }
+  
+  /* Mobile Specific Adjustments */
+  @media screen and (max-width: 767px) {
+    .code-img {
+        width: 35%; /* Full width on mobile screens */
+        float: left; /* Removes float for centered alignment */
+        margin-right: 20px; /* Adjusts spacing */
+    }
+    .social-media-img {
+        width: 35%; /* Full width on mobile screens */
+        float: right; /* Removes float for centered alignment */
+        margin-left: 20px; /* Adjusts spacing */
+      }
+  }
+  
+  /* Tablet Specific Adjustments */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .code-img {
+      width: 35%; /* Slightly larger for better visibility */
+      float: left; /* Retains left float */
+      margin-right: 20px; /* Adjusts spacing */
+    }
+  
+    .social-media-img {
+      width: 35%; /* Slightly larger for better visibility */
+      float: right; /* Retains right float */
+      margin-left: 20px; /* Adjusts spacing */
+    }
+  }
+  
+  /* Desktop Specific Adjustments */
+  @media screen and (min-width: 1024px) {
+    .code-img {
+      width: 25%; /* Maintains 25% width */
+      float: left; /* Floats to the left */
+      margin-right: 30px; /* Adds consistent spacing */
+    }
+  
+    .social-media-img {
+      width: 25%; /* Maintains 25% width */
+      float: right; /* Floats to the right */
+      margin-left: 30px; /* Adds consistent spacing */
+    }
+  }
+  
+  
+  .tech-stack {
+    text-align: center;
+    margin: 20px auto;
+    padding: 0;
+  }
+  
+  .tech-stack-table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  
+    th, td {
+      padding: 10px;
+      text-align: center;
+      vertical-align: top;
+    }
+  
+    th {
+      font-weight: bold;
+      background-color: #E4F9F5;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    ul li {
+      margin: 5px 0;
+    }
+  }
+  
+  /* Tablet Layout */
+  @media screen and (min-width: 768px) {
+    .tech-stack-table {
+      display: table;
+    }
+  
+    .tech-stack-table th,
+    .tech-stack-table td {
+      display: table-cell;
+      text-align: left;
+    }
+  
+    .tech-stack-table td {
+      width: 33%;
+    }
+  }
+  
+  /* Mobile Table Layout */
+  @media screen and (max-width: 767px) {
+    .tech-stack-table {
+      display: block; /* Stack table rows on mobile */
+      width: 90%; /* Occupy 90% of the screen width */
+      margin: 0 auto; /* Center the table */
+    }
+  
+    .tech-stack-table thead {
+      display: none; /* Hide standard table headers */
+    }
+  
+    .tech-stack-table tbody {
+      display: block; /* Stack rows */
+    }
+
+    // transition effect for the background color change, you can modify your CSS to add a transition:
+    .tech-stack-table tbody tr {
+      transition: background-color 0.3s ease;
+  } 
+  
+  
+    .tech-stack-table tr {
+      display: block; /* Make each row a block */
+      margin-bottom: 20px; /* Add space between rows */
+      border: 1px solid #ddd; /* Add borders for better visibility */
+      border-radius: 5px; /* Round corners for aesthetics */
+      padding: 10px;
+    }
+  
+    .tech-stack-table td {
+      display: block; /* Stack each cell */
+      text-align: center; /* Align text to the left */
+      width: 100%; /* Ensure cells take full width */
+      margin-bottom: 10px; /* Add spacing between cells */
+    }
+  
+    .tech-stack-table td::before {
+      content: attr(data-label); /* Display the header name before the content */
+      font-weight: bold;
+      color: black; /* Optional: Add color for the headers */
+      display: block; /* Make it appear as a separate line */
+      margin-bottom: 5px; /* Space between header and content */
+      background-color: #E4F9F5;
+      padding: 5px 0px;
+    }
+  
+    .tech-stack-table ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  
+    .tech-stack-table ul li {
+      margin: 5px 0;
+    }
+  }
+  

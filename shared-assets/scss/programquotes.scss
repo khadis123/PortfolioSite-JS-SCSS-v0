@@ -1,0 +1,51 @@
+// _programquotes.scss
+//Styles for programming quotes and jokes section from external API
+
+
+@import 'base';
+@import 'variables';
+@import 'mixins';
+
+#quotes-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-top: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    
+    h2 {
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+  
+    .quote-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
+      p {
+        font-size: 1.2rem;
+        color: $tertiary-color;
+        margin-bottom: 10px;
+      }
+  
+      #new-quote-btn {
+        padding: 10px 15px;
+        background: $primary-color;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.3s;
+  
+        &:hover {
+          background: $pink-accent-color;
+        }
+      }
+    }
+  }
+  

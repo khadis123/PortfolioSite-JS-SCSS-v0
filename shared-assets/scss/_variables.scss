@@ -1,0 +1,27 @@
+// _variables.scss
+// Variables (_variables.scss) for all the colors, fonts, and any other reusable variables
+
+// Colors
+$primary-color: #66BFBF;
+$secondary-color: #11999E;
+$tertiary-color: #40514E;
+$accent-color: #E4F9F5;
+$pink-accent-color: #e90d99; /* Highlight color for active link */
+
+:root {
+    --pink-accent-color: #e90d99; // Define as a CSS variable
+  }
+  
+
+$hover-color: darken($primary-color, 10%);
+
+// Fonts
+$font-main: 'Merriweather', serif;
+$font-secondary: 'Montserrat', sans-serif;
+$font-accent: 'Sacramento', cursive;
+
+// Breakpoints (for responsive design)
+$mobile-width: 767px;     // Mobile breakpoint
+$tablet-width: 768px;     // Tablet breakpoint
+$desktop-width: 1024px;   // Desktop breakpoint
+$desktop-max-width: 720px; // Maximum width for content on desktop screens

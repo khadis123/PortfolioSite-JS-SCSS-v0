@@ -1,0 +1,219 @@
+// _navbar.scss
+@import 'base';
+@import 'variables';
+@import 'mixins';
+
+.navbar {
+  background-color: $accent-color;
+  padding: 10px 0px;
+
+  position: fixed; /* Fix the navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make it span the whole width */
+  z-index: 999; /* Make sure it stays on top of other content */
+
+  @include respond-to(desktop) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include respond-to(desktop) {
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-right: 300px;
+
+      }
+
+    li {
+      margin: 0 10px;
+
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        font-family: $font-secondary;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $pink-accent-color;
+        }
+
+              /* Ensure active link styling */
+      &.active {
+        color: $pink-accent-color; /* Highlight color for active link */
+        font-weight: bold;
+        /* NOTE TO MYSELF: TO ADD LATER more styles to make the active link stand out a bit */
+      }
+      }
+    }
+    .desktop-only {
+        display: block; // Make sure the links are displayed on desktop by default
+      
+        // Hide on tablet screens
+        @include respond-to(tablet) {
+          display: none;
+        }
+      }
+  }
+
+  // Language switchers
+  .mobile-tablet-only-lang-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    a {
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: $secondary-color;
+
+      &:hover {
+        text-decoration: underline;
+        color: #ffffff;
+      }
+    }
+
+    @include respond-to(desktop) {
+      display: none; // Hide on desktop
+    }
+
+      // Adjust on mobile to prevent overflow
+  @include respond-to(mobile) {
+    gap: 0.3rem; // Minimize the gap on mobile
+    padding: 0 0.5rem; // small padding to avoid touching screen edges
+  }
+  }
+
+  .desktop-only-lang-switcher {
+    display: none;
+
+    @include respond-to(desktop) {
+      display: flex;
+      margin-left: auto;
+      gap: 0.5rem;
+    //   padding-right: 250px;
+
+      a {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $secondary-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Desktop and mobile visibility logic
+  @include respond-to(desktop) {
+    .desktop-only-lang-switcher {
+      @include show;
+    }
+    .mobile-tablet-only-lang-switcher {
+      @include hide;
+    }
+  }
+
+  @include respond-to(mobile) {
+    .desktop-only-lang-switcher {
+      @include hide;
+    }
+    .mobile-tablet-only-lang-switcher {
+      @include show;
+    }
+  }
+
+  @include respond-to(tablet) {
+    .desktop-only-lang-switcher {
+      @include hide;
+    }
+    .mobile-tablet-only-lang-switcher {
+      @include show;
+    }
+  }
+
+
+  // Hamburger menu
+  .hamburger {
+    display: none;
+    cursor: pointer;
+
+
+    @include respond-to(tablet) {
+      display: block; // Show on mobile and tablet
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .hamburger-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+
+      span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: $secondary-color;
+        border-radius: 2px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+    }
+
+    hamburger-icon:hover {
+        color: $pink-accent-color;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -50px;
+      background-color: $accent-color;
+      width: 100%;
+      list-style: none;
+      padding: 10px 0;
+      text-align: center;
+
+      li {
+        margin: 10px 0;
+
+        a {
+          color: $secondary-color;
+          font-size: 1.2rem;
+          text-decoration: none;
+
+          &:hover {
+            color: $pink-accent-color;
+          }
+        }
+      }
+    }
+
+    .menu-toggle:checked + .hamburger-icon + .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 10px;
+    }
+  }
+}
+
+

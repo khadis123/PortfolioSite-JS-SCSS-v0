@@ -1,0 +1,948 @@
+// /* _projectmodal.scss */
+
+// @import 'base';
+// @import 'variables';
+// @import 'mixins';
+
+
+// // Modal Styling
+// #project-modal {
+//     display: none; /* Hidden by default */
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 9999;
+    
+//     .modal-content {
+//       background-color: #fff;
+//       padding: 20px;
+//       border-radius: 8px;
+//       max-width: 600px;
+//       width: 90%;
+//       text-align: center;
+//       opacity: 0;
+//       transform: scale(0.8);
+//       transition: opacity 0.3s ease, transform 0.3s ease;
+      
+//       .modal-img {
+//         width: 100%;
+//         height: auto;
+//         margin-bottom: 20px;
+//       }
+      
+//       .close-btn {
+//         position: absolute;
+//         top: 10px;
+//         right: 10px;
+//         background-color: transparent;
+//         border: none;
+//         font-size: 1.5rem;
+//         color: #333;
+//         cursor: pointer;
+//         z-index: 10000;
+//       }
+  
+//       h3 {
+//         font-family: $font-secondary;
+//         font-size: 1.8rem;
+//         color: $primary-color;
+//         margin-bottom: 15px;
+//       }
+  
+//       p {
+//         font-family: $font-main;
+//         font-size: 1rem;
+//         color: $tertiary-color;
+//         margin-bottom: 20px;
+//       }
+  
+//       .modal-links {
+//         display: flex;
+//         justify-content: space-around;
+//         gap: 15px;
+  
+//         a {
+//           font-size: 1rem;
+//           color: $primary-color;
+//           text-decoration: none;
+//           transition: color 0.3s ease;
+  
+//           &:hover {
+//             color: $accent-color;
+//           }
+//         }
+//       }
+//     }
+    
+//     &.open {
+//       display: flex;
+//       opacity: 1;
+//       transform: scale(1);
+//     }
+//   }
+  
+//   .modal-overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+//     z-index: 9998;
+//   }
+  
+  
+
+
+
+// /* _projectmodal.scss */
+
+// @import 'base';
+// @import 'variables';
+// @import 'mixins';
+
+// // Modal Styling
+// #project-modal {
+//   display: none; /* Hidden by default */
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 9999;
+
+//   /* Modal Styles */
+// .modal {
+//     display: none; /* Hidden by default */
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 9999;
+//     opacity: 0; /* Modal starts hidden */
+//     transition: opacity 0.3s ease; /* Fade-in transition */
+//   }
+  
+//   .modal.open {
+//     display: flex; /* Show the modal when it has the 'open' class */
+//     opacity: 1; /* Fully visible */
+//   }
+  
+//   .modal-overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+//     z-index: 9998;
+//   }
+
+//   .modal-content {
+//     background-color: #fff;
+//     padding: 20px;
+//     border-radius: 8px;
+//     max-width: 600px;
+//     width: 90%;
+//     text-align: center;
+//     opacity: 0;
+//     transform: scale(0.8);
+//     transition: opacity 0.3s ease, transform 0.3s ease;
+//     position: relative;
+    
+//     .modal-img {
+//       width: 100%;
+//       height: auto;
+//       margin-bottom: 20px;
+//     }
+    
+//     .close-btn {
+//       position: absolute;
+//       top: 10px;
+//       right: 10px;
+//       background-color: transparent;
+//       border: none;
+//       font-size: 1.5rem;
+//       color: #333;
+//       cursor: pointer;
+//       z-index: 10000;
+//     }
+
+//     h3 {
+//       font-family: $font-secondary;
+//       font-size: 1.8rem;
+//       color: $primary-color;
+//       margin-bottom: 15px;
+//     }
+
+//     p {
+//       font-family: $font-main;
+//       font-size: 1rem;
+//       color: $tertiary-color;
+//       margin-bottom: 20px;
+//     }
+
+//     .modal-links {
+//       display: flex;
+//       justify-content: space-around;
+//       gap: 15px;
+
+//       a {
+//         font-size: 1rem;
+//         color: $primary-color;
+//         text-decoration: none;
+//         transition: color 0.3s ease;
+
+//         &:hover {
+//           color: $accent-color;
+//         }
+//       }
+//     }
+//   }
+
+//   &.open {
+//     display: flex;
+//     opacity: 1;
+//     transform: scale(1);
+//     transition: opacity 0.3s ease, transform 0.3s ease;
+//   }
+// }
+
+
+
+
+
+
+// /* _projectmodal.scss */
+
+// @import 'base';
+// @import 'variables';
+// @import 'mixins';
+
+// // Modal Styling
+// #project-modal {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 9999;
+//   display: flex; /* Enables flexbox centering */
+//   visibility: hidden; /* Initially hidden */
+//   opacity: 0;
+//   transition: opacity 0.3s ease, visibility 0.3s ease;
+
+//   /* Show modal when the 'open' class is added */
+//   &.open {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+
+//   .modal {
+//     background-color: #fff;
+//     padding: 20px;
+//     border-radius: 8px;
+//     max-width: 600px;
+//     width: 50%;
+//     text-align: center;
+//     opacity: 0;
+//     transform: scale(0.8);
+//     transition: opacity 0.3s ease, transform 0.3s ease;
+//     position: relative;
+
+//     /* Make the modal appear smoothly */
+//     #project-modal.open & {
+//       opacity: 1;
+//       transform: scale(1);
+//     }
+
+//     // .modal-img {
+//     //   width: 100%;
+//     //   height: auto;
+//     //   margin-bottom: 20px;
+//     // }
+
+//     .modal-content {
+//       background-color: #fff;
+//       padding: 20px;
+//       border-radius: 8px;
+//       max-width: 600px;
+//       width: 60%;
+//       text-align: center;
+//       opacity: 0;
+//       transform: scale(0.8);
+//       transition: opacity 0.3s ease, transform 0.3s ease;
+      
+//       .modal-img {
+//         width: 100%;
+//         height: auto;
+//         margin-bottom: 20px;
+//       }
+//     }
+
+//     .close-btn {
+//       position: absolute;
+//       top: 10px;
+//       right: 10px;
+//       background-color: transparent;
+//       border: none;
+//       font-size: 1.5rem;
+//       color: #333;
+//       cursor: pointer;
+//       z-index: 10000;
+//     }
+
+//     h3 {
+//       font-family: $font-secondary;
+//       font-size: 1.8rem;
+//       color: $primary-color;
+//       margin-bottom: 15px;
+//     }
+
+//     p {
+//       font-family: $font-main;
+//       font-size: 1rem;
+//       color: $tertiary-color;
+//       margin-bottom: 20px;
+//     }
+
+//     .modal-links {
+//       display: flex;
+//       justify-content: space-around;
+//       gap: 15px;
+
+//       a {
+//         font-size: 1rem;
+//         color: $primary-color;
+//         text-decoration: none;
+//         transition: color 0.3s ease;
+
+//         &:hover {
+//           color: $accent-color;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+// /* _projectmodal.scss */
+
+// @import 'base';
+// @import 'variables';
+// @import 'mixins';
+
+// // Modal Styling
+// #project-modal {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 9999;
+//   display: flex; /* Enables flexbox centering */
+//   visibility: hidden; /* Initially hidden */
+//   opacity: 0;
+//   transition: opacity 0.3s ease, visibility 0.3s ease;
+
+//   /* Show modal when the 'open' class is added */
+//   &.open {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+
+//   .modal {
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 90%;
+//     max-width: 600px;
+
+//     .modal-content {
+//       background-color: #fff;
+//       padding: 20px;
+//       border-radius: 8px;
+//       max-width: 600px;
+//       width: 60%;
+//       text-align: center;
+//       opacity: 0;
+//       transform: scale(0.8);
+//       transition: opacity 0.3s ease, transform 0.3s ease;
+
+//       /* Make the modal appear smoothly */
+//       #project-modal.open & {
+//         opacity: 1;
+//         transform: scale(1);
+//       }
+
+//       .modal-img {
+//         width: 100%;
+//         height: auto;
+//         margin-bottom: 20px;
+//       }
+
+//       .close-btn {
+//         position: absolute;
+//         top: 10px;
+//         right: 10px;
+//         background-color: transparent;
+//         border: none;
+//         font-size: 1.5rem;
+//         color: #333;
+//         cursor: pointer;
+//         z-index: 10000;
+//       }
+
+//       h3 {
+//         font-family: $font-secondary;
+//         font-size: 1.8rem;
+//         color: $primary-color;
+//         margin-bottom: 15px;
+//       }
+
+//       p {
+//         font-family: $font-main;
+//         font-size: 1rem;
+//         color: $tertiary-color;
+//         margin-bottom: 20px;
+//       }
+
+//       .modal-links {
+//         display: flex;
+//         justify-content: space-around;
+//         gap: 15px;
+
+//         a {
+//           font-size: 1rem;
+//           color: $primary-color;
+//           text-decoration: none;
+//           transition: color 0.3s ease;
+
+//           &:hover {
+//             color: $accent-color;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+// /* _projectmodal.scss */
+
+// @import 'base';
+// @import 'variables';
+// @import 'mixins';
+
+// // Modal Container
+// #project-modal {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 9999;
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: opacity 0.3s ease, visibility 0.3s ease;
+
+//   /* When the modal is open */
+//   &.open {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+
+//   /* Modal Content */
+//   .modal {
+//     background-color: #fff;
+//     border-radius: 8px;
+//     width: 90%;
+//     max-width: 600px;
+//     padding: 20px;
+//     text-align: center;
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     opacity: 0;
+//     transform: translateY(-20px);
+//     transition: opacity 0.3s ease, transform 0.3s ease;
+
+//     /* Make modal appear smoothly */
+//     #project-modal.open & {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+
+//     /* Close Button */
+//     .close-btn {
+//       position: absolute;
+//       top: 15px;
+//       right: 15px;
+//       background-color: transparent;
+//       border: none;
+//       font-size: 1.5rem;
+//       color: #333;
+//       cursor: pointer;
+//       z-index: 10000;
+
+//       &:hover {
+//         color: red;
+//       }
+//     }
+
+//     /* Modal Image */
+//     .modal-img {
+//       width: 80%; /* Image always at 80% of screen width */
+//       max-width: 500px; /* Prevents it from becoming too large */
+//       height: auto;
+//       border-radius: 6px;
+//       margin-bottom: 15px;
+//     }
+
+//     /* Modal Title */
+//     h3 {
+//       font-family: $font-secondary;
+//       font-size: 1.8rem;
+//       color: $primary-color;
+//       margin-bottom: 10px;
+//     }
+
+//     /* Modal Description */
+//     p {
+//       font-family: $font-main;
+//       font-size: 1rem;
+//       color: $tertiary-color;
+//       margin-bottom: 15px;
+//       max-width: 90%;
+//     }
+
+//     /* Modal Links */
+//     .modal-links {
+//       display: flex;
+//       justify-content: center;
+//       gap: 15px;
+//       flex-wrap: wrap;
+
+//       a {
+//         font-size: 1rem;
+//         color: $primary-color;
+//         text-decoration: none;
+//         transition: color 0.3s ease;
+//         font-weight: bold;
+
+//         &:hover {
+//           color: $accent-color;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// /* Mobile Optimization */
+// @media (max-width: 600px) {
+//   #project-modal {
+//     align-items: flex-start; /* Moves modal higher on smaller screens */
+//     padding-top: 50px;
+//   }
+
+//   .modal {
+//     width: 95%;
+//     max-width: 90%;
+//     padding: 15px;
+
+//     .modal-img {
+//       width: 90%;
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+// /* _projectmodal.scss */
+
+// @import 'base';
+// @import 'variables';
+// @import 'mixins';
+
+// // Modal Container
+// #project-modal {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.7);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 9999;
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: opacity 0.3s ease, visibility 0.3s ease;
+
+//   &.open {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+
+//   /* Modal Box */
+//   .modal {
+//     background-color: #fff;
+//     border-radius: 8px;
+//     width: 90%;
+//     max-width: 600px;
+//     padding: 20px;
+//     text-align: center;
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     opacity: 0;
+//     transform: translateY(-20px);
+//     transition: opacity 0.3s ease, transform 0.3s ease;
+
+//     #project-modal.open & {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+
+//     /* Modal Content Wrapper */
+//     .modal-content {
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//     }
+
+//     /* Close Button */
+//     .close-btn {
+//       position: absolute;
+//       top: 15px;
+//       right: 15px;
+//       background-color: transparent;
+//       border: none;
+//       font-size: 1.5rem;
+//       color: #333;
+//       cursor: pointer;
+//       z-index: 10000;
+
+//       &:hover {
+//         color: red;
+//       }
+//     }
+
+//     /* Modal Image */
+//     .modal-img {
+//       width: 80%;
+//       max-width: 500px;
+//       height: auto;
+//       border-radius: 6px;
+//       margin-bottom: 15px;
+//     }
+
+//     /* Modal Title */
+//     h3 {
+//       font-family: $font-secondary;
+//       font-size: 1.8rem;
+//       color: $primary-color;
+//       margin-bottom: 10px;
+//     }
+
+//     /* Modal Description */
+//     p {
+//       font-family: $font-main;
+//       font-size: 1rem;
+//       color: $tertiary-color;
+//       margin-bottom: 15px;
+//       max-width: 90%;
+//     }
+
+//     /* Modal Links */
+//     .modal-links {
+//       display: flex;
+//       justify-content: center;
+//       gap: 15px;
+//       flex-wrap: wrap;
+
+//       a {
+//         font-size: 1rem;
+//         color: $primary-color;
+//         text-decoration: none;
+//         transition: color 0.3s ease;
+//         font-weight: bold;
+
+//         &:hover {
+//           color: $accent-color;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// /* Mobile Optimization */
+// @media (max-width: 600px) {
+//   #project-modal {
+//     align-items: flex-start;
+//     padding-top: 50px;
+//   }
+
+//   .modal {
+//     width: 95%;
+//     max-width: 90%;
+//     padding: 15px;
+
+//     .modal-content {
+//       width: 100%;
+//     }
+
+//     .modal-img {
+//       width: 90%;
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+/* _projectmodal.scss */
+
+@import 'base';
+@import 'variables';
+@import 'mixins';
+
+// Modal Container
+#project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border: 3px solid #fff;
+
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Modal Box */
+  .modal {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    #project-modal.open & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Modal Content Wrapper */
+    .modal-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 3px solid #fff;
+
+    }
+
+    /* Close Button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background-color: transparent;
+      border: none;
+      font-size: 1.5rem;
+      color: #333;
+      cursor: pointer;
+      z-index: 10000;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+    /* Fix Image Overflow Issue */
+    .modal-img {
+      width: 80%;
+      max-width: 500px;
+      height: auto;
+      max-height: 60vh; /* Prevents it from taking full screen */
+      border-radius: 6px;
+      object-fit: contain; /* Ensures it scales properly */
+      margin-bottom: 15px;
+    }
+
+    /* Modal Title */
+    h3 {
+      font-family: $font-secondary;
+      font-size: 1.8rem;
+      color: $primary-color;
+      margin-bottom: 10px;
+    }
+
+    /* Modal Description */
+    p {
+      font-family: $font-main;
+      font-size: 1rem;
+      color: $pink-accent-color;
+      margin-bottom: 15px;
+      max-width: 90%;
+    }
+
+    /* Modal Links */
+    .modal-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+
+      a {
+        font-size: 1rem;
+        color: $primary-color;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: bold;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  #project-modal {
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+
+  .modal {
+    width: 95%;
+    max-width: 90%;
+    padding: 15px;
+
+    .modal-content {
+      width: 80%;
+    }
+
+    .modal-img {
+      width: 90%;
+      max-height: 50vh; /* Adjusted max-height for smaller screens */
+    }
+  }
+}
+
+
+/* Tablet Optimization */
+@include respond-to(tablet) {
+    #project-modal {
+        align-items: flex-start;
+        padding-top: 50px;
+      }
+    
+      .modal {
+        width: 95%;
+        max-width: 90%;
+        padding: 15px;
+    
+        .modal-content {
+          width: 80%;
+        }
+    
+        .modal-img {
+          width: 90%;
+          max-height: 50vh;
+        }
+      }
+  }
+
+
+
+
+/* Desktop Optimization */
+@include respond-to(desktop) {
+    #project-modal {
+        align-items: flex-start;
+        padding-top: 50px;
+      }
+    
+      .modal {
+        width: 95%;
+        max-width: 90%;
+        padding: 15px;
+    
+        .modal-content {
+          width: 80%;
+        }
+    
+        .modal-img {
+          width: 90%;
+          max-height: 50vh; /* Adjusted max-height for smaller screens */
+        }
+      }
+  }

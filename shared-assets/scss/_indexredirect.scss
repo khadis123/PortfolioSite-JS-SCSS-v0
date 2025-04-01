@@ -1,0 +1,83 @@
+// _indexredirect.scss
+// Language redirecting main page styles, from where user gets redirected to en or fr version of website
+
+// Import shared variables and mixins
+@import 'variables';
+@import 'mixins';
+@import 'header';
+
+.redirect-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $accent-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-redirect {
+    @include button-style;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: $primary-color;
+    color: $accent-color;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.noscript-message {
+  display: none;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $secondary-color;
+    font-family: $font-secondary;
+    margin: 10px 20px;
+    text-decoration: none;
+  }
+}
+
+// Style noscript block when JavaScript is disabled
+noscript {
+  .redirect-container {
+    display: none;
+  }
+
+  .noscript-message {
+    display: block;
+    margin: auto;
+    padding: 2rem;
+    background-color: $accent-color;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+  }
+}

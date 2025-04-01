@@ -1,0 +1,115 @@
+//_blogindex.scss
+
+// SCSS styling for Blog Main Page 
+
+// Import shared variables and mixins
+@import 'base';
+@import 'variables';
+@import 'mixins';
+
+@mixin responsive-width($mobile, $tablet, $desktop) {
+  width: 100%;
+  max-width: $mobile;
+
+  @media (min-width: 768px) {
+    max-width: $tablet;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: $desktop;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  .navbar .nav-links {
+    display: inline-block;
+  }
+}
+
+.page-title {
+  font-family: 'Montserrat', sans-serif;
+  color: $primary-color;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container {
+  @include responsive-width(90%, 80%, 720px);
+}
+
+.project-card {
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: $primary-color;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    .card-title {
+      color: $secondary-color;
+    }
+
+  }
+
+  .card-img-top {
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    color: $secondary-color;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    color: $primary-color, 20%;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $pink-accent-color;
+    }
+  }
+}
+
+.pagination {
+  .page-link {
+    color: $primary-color;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: #fff;
+  }
+}
+
+footer {
+  background-color: $tertiary-color;
+  padding: 1rem 0;
+
+  .btn-outline-primary {
+    border-color: $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+}

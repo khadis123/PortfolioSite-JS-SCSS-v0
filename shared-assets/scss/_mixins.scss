@@ -1,0 +1,90 @@
+  
+// _mixins.scss
+// Import variables to ensure they are available in mixins
+@import 'variables';
+
+// Center content: This mixin centers the content both horizontally and vertically using flexbox.
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Responsive container mixin: This mixin creates a responsive container with dynamic width based on breakpoints.
+// Default width is 90% for mobile, 80% for tablets, and 100% with a max-width for desktops.
+@mixin responsive-container {
+  width: 90%; // Default for mobile
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 80%; // For tablets
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    max-width: $desktop-max-width; // For desktops
+  }
+}
+
+// responsive-width Mixin: This mixin allows you to apply responsive width constraints.
+// Usage example: @include responsive-width(90%, 80%, 720px);
+@mixin responsive-width($mobile, $tablet, $desktop) {
+  width: 100%;
+  max-width: $mobile;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop;
+  }
+}
+
+// Hide element: This mixin hides the element by setting its display property to none.
+@mixin hide {
+  display: none;
+}
+
+// Show element: This mixin displays the element by setting its display property to block.
+@mixin show {
+  display: block;
+}
+
+// Responsive Mixin (respond-to): This mixin targets specific breakpoints (mobile, tablet, desktop) for applying responsive styles.
+// Usage example: @include respond-to(tablet) { ... }
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $mobile-width) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $tablet-width) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $desktop-width) {
+      @content;
+    }
+  }
+}
+
+// Button style: This mixin creates a customizable button style with hover effects.
+// Usage example: @include button-style($bg-color: #333, $text-color: #fff);
+@mixin button-style($bg-color: $accent-color, $text-color: #fff) {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: $text-color;
+  background-color: $bg-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}

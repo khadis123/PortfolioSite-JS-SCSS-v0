@@ -1,0 +1,32 @@
+
+// main.scss
+// This file imports all the partials to combine them into one compiled CSS file.
+// It serves as the entry point to import all partials like variables, mixins, header, projects, etc.
+
+// 1. Importing variables and mixins
+@import 'variables';  // Contains color, font, and breakpoint variables
+@import 'mixins';     // Contains reusable mixins for responsiveness, centering, etc.
+
+// 2. Import base styles (general styles for typography, resets, etc.)
+@import 'base';        // Basic global styles and resets
+
+// 3. Import layout-related partials (header, footer, etc.)
+@import 'header';      // Header styles (logo, navigation, etc.)
+@import 'navbar';      // Navbar (in Header) 
+@import 'footer';      // Footer styles (copyright, social links, etc.)
+
+// 4. Import page-specific styles (specific to About, Projects, etc.)
+@import 'about';       // Styles for the About Me section
+@import 'myskills';    // Styles for the Skills section
+@import 'projects';    // Styles for the Projects section
+@import 'projectmodal';  // Styles for project cards modal popup window
+@import 'projectsindex'; // Specific styles for the Projects Main Page
+
+// 5. Additional sections like video, contact, etc.
+@import 'video';       // Styles for embedded videos
+@import 'programquotes'; // Styles for programming quotes and jokes from external API
+@import 'contact';     // Styles for the Contact form
+
+// 6. Import responsive styles (should be last to override other styles)
+@import 'responsive';  // Responsive media queries for different screen sizes
+@import 'indexredirect';  // If this is a custom redirect or additional styling file, ensure it's at the end

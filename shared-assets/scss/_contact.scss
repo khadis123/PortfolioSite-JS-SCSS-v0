@@ -1,0 +1,97 @@
+
+// _contact.scss
+
+@import 'base';
+@import 'variables';
+@import 'mixins';
+
+#contact-me {
+    @include responsive-container;
+    text-align: center;
+    padding: 40px 0;
+  
+    h2 {
+      font-family: $font-secondary;
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 10px;
+    }
+  
+    h3 {
+      font-family: $font-secondary;
+      font-size: 1.2rem;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+  
+    .contact-message {
+      font-family: $font-main;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      max-width: $desktop-max-width;
+      margin: 0 auto;
+  
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid $secondary-color;
+        font-family: $font-secondary;
+        font-size: 1rem;
+  
+        &:focus {
+          border-color: $primary-color;
+          outline: none;
+          box-shadow: 0 0 5px rgba(102, 191, 191, 0.5);
+        }
+      }
+  
+      button {
+        background-color: $secondary-color;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        font-family: $font-secondary;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: $pink-accent-color;
+        }
+  
+        &:focus {
+          outline: 2px solid $accent-color;
+        }
+      }
+    }
+
+        // Validation-related styles (Add this part towards the end of your SCSS)
+        .error-message {
+          color: red;
+          font-size: 0.9rem;
+          margin-top: 5px;
+        }
+    
+        input.invalid,
+        textarea.invalid {
+          border-color: red;
+          box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+    
+        input:focus.invalid,
+        textarea:focus.invalid {
+          border-color: darkred;
+          box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+        }
+  }
+  

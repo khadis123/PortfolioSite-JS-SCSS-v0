@@ -1,0 +1,100 @@
+
+
+// _about.scss
+@import 'variables';
+@import 'mixins';
+  
+/* General Styles */
+.middle-container {
+    margin: 0 0 100px 0;
+  }
+  
+  /* Responsive Container */
+  .responsive-container {
+    margin: 0 auto;
+    width: 90%; /* Default for mobile */
+  }
+  
+  /* Apply the responsive styles to all images with the .responsive-image class */
+  .responsive-container .responsive-image {
+    width: 100%;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+  }
+  
+  /* Tablet Styling */
+  @media (min-width: 768px) {
+    .responsive-container {
+      width: 80%; /* Tablet */
+    }
+  }
+  
+  /* Desktop Styling */
+  @media (min-width: 1024px) {
+    .responsive-container {
+      width: 100%; /* Allow full width initially */
+      max-width: 720px; /* Constrain to 720px maximum */
+    }
+  }
+  
+  /* About Me Section */
+  #about-me {
+    margin: 40px auto;
+  }
+
+  #about-me h2 {
+    text-align: center; /* Centers the text horizontally */
+    width: 100%; /* Ensures the h2 takes full width */
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  
+  .about-me-container {
+    display: flex;
+    flex-direction: column; /* Default for mobile: stack vertically */
+    align-items: center;
+    gap: 20px; /* Space between elements */
+    text-align: center; /* Center align text for smaller screens */
+  }
+  
+  .about-me-container img {
+    width: 150px; /* Default avatar size */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .about-me-text {
+    max-width: 600px;
+  }
+  
+  .about-me-text h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .about-me-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: $secondary-color;
+  }
+  
+  /* Tablet and Desktop Screens */
+  @media (min-width: 768px) {
+    .about-me-container {
+      flex-direction: row; /* Arrange image and text side-by-side */
+      align-items: center;
+      text-align: left; /* Left align text for better readability */
+    }
+  
+    .about-me-container img {
+      width: 200px; /* Larger avatar size for bigger screens */
+      height: 200px;
+    }
+  
+    .about-me-text {
+      max-width: 720px;
+      margin-left: 20px; /* Add space between image and text */
+    }
+  }
+  

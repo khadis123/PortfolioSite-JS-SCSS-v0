@@ -1,0 +1,34 @@
+// _video.scss
+// Responsive styling for the YouTube video section
+@import 'variables';
+@import 'mixins';
+
+.video-wrapper {
+    @include responsive-container;
+    text-align: center;
+    padding: 40px 0;
+  
+    h2 {
+      font-family: $font-secondary;
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+  
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%; // Full width of the container
+      padding-top: 56.25%; // Maintain 16:9 aspect ratio for videos
+  
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; // Responsive iframe
+        height: 100%;
+        border: none;
+      }
+    }
+  }
+  

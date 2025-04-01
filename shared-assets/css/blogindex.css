@@ -1,0 +1,177 @@
+/* Highlight color for active link */
+:root {
+  --pink-accent-color: #e90d99;
+}
+
+/* Highlight color for active link */
+:root {
+  --pink-accent-color: #e90d99;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  margin: 0;
+  padding: 0;
+  color: #40514E;
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+    max-width: 720px;
+  }
+}
+
+h1 {
+  color: #66BFBF;
+  font-size: 5.625rem;
+  margin: 50px auto 0;
+  font-family: "Sacramento", cursive;
+}
+
+h2 {
+  color: #66BFBF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3,
+h4 {
+  color: #11999E;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  line-height: 2;
+}
+
+a {
+  color: #11999E;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+a:hover {
+  color: #E4F9F5;
+}
+
+hr {
+  border: dotted #E4F9F5 6px;
+  border-bottom: none;
+  width: 3%;
+  margin: 100px auto;
+}
+
+/* Highlight color for active link */
+:root {
+  --pink-accent-color: #e90d99;
+}
+
+/* Highlight color for active link */
+:root {
+  --pink-accent-color: #e90d99;
+}
+
+.navbar-container {
+  display: flex;
+}
+.navbar-container .navbar .nav-links {
+  display: inline-block;
+}
+
+.page-title {
+  font-family: "Montserrat", sans-serif;
+  color: #66BFBF;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 90%;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.project-card {
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  border-color: #66BFBF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.project-card:hover .card-title {
+  color: #11999E;
+}
+.project-card .card-img-top {
+  height: auto;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.project-card .card-title {
+  font-size: 1.25rem;
+  color: #11999E;
+  font-weight: bold;
+}
+.project-card .card-text {
+  font-size: 0.9rem;
+  color: #66BFBF, 20%;
+}
+.project-card .btn-primary {
+  background-color: #66BFBF;
+  border: none;
+  transition: background-color 0.3s;
+}
+.project-card .btn-primary:hover {
+  background-color: #e90d99;
+}
+
+.pagination .page-link {
+  color: #66BFBF;
+}
+.pagination .page-link:hover {
+  color: #E4F9F5;
+}
+.pagination .page-item.active .page-link {
+  background-color: #66BFBF;
+  border-color: #66BFBF;
+  color: #fff;
+}
+
+footer {
+  background-color: #40514E;
+  padding: 1rem 0;
+}
+footer .btn-outline-primary {
+  border-color: #66BFBF;
+  color: #66BFBF;
+}
+footer .btn-outline-primary:hover {
+  background-color: #66BFBF;
+  color: #fff;
+}/*# sourceMappingURL=blogindex.css.map */

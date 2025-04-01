@@ -1,0 +1,63 @@
+// _base.scss
+
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-family: $font-main;
+  margin: 0;
+  padding: 0;
+  color: $tertiary-color;
+  background-color: #fff; // Default background color
+}
+
+// Default container class for consistent widths
+.container {
+  @include responsive-container;
+}
+
+// Typography
+h1 {
+  color: $primary-color;
+  font-size: 5.625rem;
+  margin: 50px auto 0;
+  font-family: $font-accent;
+}
+
+h2 {
+  color: $primary-color;
+  font-family: $font-secondary;
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3,
+h4 {
+  color: $secondary-color;
+  font-family: $font-secondary;
+}
+
+p {
+  line-height: 2; // Ensures readability for paragraphs
+}
+
+// Links
+a {
+  color: $secondary-color;
+  font-family: $font-secondary;
+  margin: 10px 20px;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+// Horizontal Rule
+hr {
+  border: dotted $accent-color 6px;
+  border-bottom: none;
+  width: 3%;
+  margin: 100px auto;
+}

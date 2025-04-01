@@ -1,0 +1,123 @@
+/* Highlight color for active link */
+:root {
+  --pink-accent-color: #e90d99;
+}
+
+/* Highlight color for active link */
+:root {
+  --pink-accent-color: #e90d99;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  margin: 0;
+  padding: 0;
+  color: #40514E;
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+    max-width: 720px;
+  }
+}
+
+h1 {
+  color: #66BFBF;
+  font-size: 5.625rem;
+  margin: 50px auto 0;
+  font-family: "Sacramento", cursive;
+}
+
+h2 {
+  color: #66BFBF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3,
+h4 {
+  color: #11999E;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  line-height: 2;
+}
+
+a {
+  color: #11999E;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+a:hover {
+  color: #E4F9F5;
+}
+
+hr {
+  border: dotted #E4F9F5 6px;
+  border-bottom: none;
+  width: 3%;
+  margin: 100px auto;
+}
+
+/* Highlight color for active link */
+:root {
+  --pink-accent-color: #e90d99;
+}
+
+/* Highlight color for active link */
+:root {
+  --pink-accent-color: #e90d99;
+}
+
+#quotes-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-top: 2px solid #66BFBF;
+  border-bottom: 2px solid #66BFBF;
+}
+#quotes-section h2 {
+  font-size: 2rem;
+  color: #66BFBF;
+  margin-bottom: 20px;
+}
+#quotes-section .quote-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+#quotes-section .quote-container p {
+  font-size: 1.2rem;
+  color: #40514E;
+  margin-bottom: 10px;
+}
+#quotes-section .quote-container #new-quote-btn {
+  padding: 10px 15px;
+  background: #66BFBF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+#quotes-section .quote-container #new-quote-btn:hover {
+  background: #e90d99;
+}/*# sourceMappingURL=programquotes.css.map */

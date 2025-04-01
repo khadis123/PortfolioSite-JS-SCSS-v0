@@ -1,0 +1,112 @@
+// _projects.scss
+// Projects Section (_projects.scss) here I am using media queries for responsiveness in the projects section.
+// This section includes a grid of project cards with a responsive layout.
+  
+// _projects.scss
+
+@import 'base';
+@import 'variables';
+@import 'mixins';
+
+#my-projects {
+    @include responsive-container;
+    text-align: center;
+    padding: 40px 0;
+  
+    h2 {
+      font-family: $font-secondary;
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+  
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Add space between cards */
+    }
+    
+    .project-card {
+      flex: 1 1 calc(33.33% - 20px); /* Default: 3 cards per row */
+      min-width: 220px; /* Prevent cards from becoming too small */
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    
+      &:hover {
+        transform: translateY(-5px); /* Hover effect */
+      }
+      @include respond-to(desktop) {
+        max-width: 20%;
+      }
+
+    }
+    
+    @media (max-width: 991px) {
+      .project-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
+      }
+    }
+    
+    @media (max-width: 575px) {
+      .project-card {
+        flex: 1 1 calc(100% - 20px); /* 1 card per row on mobile */
+      }
+    }
+    
+  
+      .project-card-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+  
+      h3 {
+        margin: 10px 0;
+        font-family: $font-secondary;
+        font-size: 1.5rem;
+        color: $secondary-color;
+      }
+  
+      p {
+        font-family: $font-main;
+        padding: 0 10px 20px;
+        font-size: 1rem;
+        color: $tertiary-color;
+      }
+    }
+
+    #my-projects-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .my-projects-button-style {
+      background-color: $primary-color;  
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      text-align: center;
+      align-items: center;
+      margin-bottom: 50px;
+    
+      &:hover {
+        background-color: $pink-accent-color; 
+        transform: scale(1.05);  
+      }
+    
+      &:focus {
+        outline: none;
+      }
+    }
+    
+  
+  
